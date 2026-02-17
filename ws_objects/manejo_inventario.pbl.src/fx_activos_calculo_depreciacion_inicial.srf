@@ -1,0 +1,54 @@
+﻿$PBExportHeader$fx_activos_calculo_depreciacion_inicial.srf
+global type fx_activos_calculo_depreciacion_inicial from function_object
+end type
+
+forward prototypes
+global function st_error fx_activos_calculo_depreciacion_inicial (integer ano_periodo, integer mes_periodo, string recalcular_si_no)
+end prototypes
+
+global function st_error fx_activos_calculo_depreciacion_inicial (integer ano_periodo, integer mes_periodo, string recalcular_si_no);st_error lst_error
+
+Double valor_acumulado_1_ano
+Any proceso_1
+String mensj
+Integer resp
+
+DECLARE proceso_1 PROCEDURE FOR activos_calculo_depreciacion_inicial
+	@ano_periodo		= :ano_periodo,
+	@mes_periodo		= :mes_periodo,
+	@recalcular_si_no	= :recalcular_si_no,
+	@respuesta			= :mensj output,
+	@resp_num			= :resp output;
+	
+EXECUTE proceso_1;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en la Ejecución -> "+Trim(mensj)
+END IF
+
+FETCH proceso_1 INTO :mensj, :resp;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el FETCH -> "+Trim(mensj)
+END IF
+	
+CLOSE proceso_1;
+
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el CLOSE -> "+Trim(mensj)
+END IF
+	
+IF resp = 1 THEN
+	mensj = "! Imposible Ejecutar Procedimiento Almacenado activos_calculo_depreciacion_inicial ¡~r~n"+Trim(mensj)
+END IF
+IF resp = 2 THEN
+	mensj = "! El Procedimiento activos_calculo_depreciacion_inicial se Ejecutó Correctamente ¡"
+END IF
+
+
+lst_error.codigo_error	= resp
+lst_error.mensaje_error = mensj
+
+RETURN lst_error
+end function
+

@@ -1,0 +1,62 @@
+﻿$PBExportHeader$fx_activos_trasladar_de_per_a_per_2.srf
+global type fx_activos_trasladar_de_per_a_per_2 from function_object
+end type
+
+forward prototypes
+global function st_error fx_activos_trasladar_de_per_a_per_2 (string clase_documento_saca, double identificacion_saca, string clase_documento_entra, double identificacion_entra, date fecha_cambio, string codigo_tipo_inventario, string codigo_clase_de_activo, string codigo_marca, string codigo_modelo, integer placa_inventario, string codigo_ubicacion)
+end prototypes
+
+global function st_error fx_activos_trasladar_de_per_a_per_2 (string clase_documento_saca, double identificacion_saca, string clase_documento_entra, double identificacion_entra, date fecha_cambio, string codigo_tipo_inventario, string codigo_clase_de_activo, string codigo_marca, string codigo_modelo, integer placa_inventario, string codigo_ubicacion);st_error lst_error
+
+Double valor_acumulado_1_ano
+Any proceso_1
+String mensj
+Integer resp
+
+DECLARE proceso_1 PROCEDURE FOR activos_trasladar_de_persona_a_persona_2
+	@clase_documento_saca	= :clase_documento_saca,
+	@identificacion_saca		= :identificacion_saca,
+	@clase_documento_entra	= :clase_documento_entra,
+	@identificacion_entra	= :identificacion_entra,
+	@fecha_cambio				= :fecha_cambio,
+	@codigo_tipo_inventario	= :codigo_tipo_inventario,
+	@codigo_clase_de_activo	= :codigo_clase_de_activo,
+	@codigo_marca				= :codigo_marca,
+	@codigo_modelo				= :codigo_modelo, 
+	@placa_inventario			= :placa_inventario,
+	@codigo_ubicacion			= :codigo_ubicacion,
+	@respuesta					= :mensj output,
+	@resp_num					= :resp output;
+	
+EXECUTE proceso_1;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en la Ejecución -> "+Trim(mensj)
+END IF
+
+FETCH proceso_1 INTO :mensj, :resp;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el FETCH -> "+Trim(mensj)
+END IF
+	
+CLOSE proceso_1;
+
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el CLOSE -> "+Trim(mensj)
+END IF
+	
+IF resp = 1 THEN
+	mensj = "! Imposible Ejecutar Procedimiento Almacenado activos_trasladar_de_persona_a_persona_2 ¡~r~n"+Trim(mensj)
+END IF
+IF resp = 2 THEN
+	mensj = "! El Procedimiento activos_trasladar_de_persona_a_persona_2 se Ejecutó Correctamente ¡"
+END IF
+
+
+lst_error.codigo_error	= resp
+lst_error.mensaje_error = mensj
+
+RETURN lst_error
+end function
+

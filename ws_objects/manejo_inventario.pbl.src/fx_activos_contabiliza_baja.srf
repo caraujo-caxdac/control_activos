@@ -1,0 +1,64 @@
+﻿$PBExportHeader$fx_activos_contabiliza_baja.srf
+global type fx_activos_contabiliza_baja from function_object
+end type
+
+forward prototypes
+global function st_error fx_activos_contabiliza_baja (datetime fecha_de_compra, double valor_de_compra, string codigo_tipo_inventario, string codigo_clase_de_activo, string codigo_marca, string codigo_modelo, integer placa_inventario, date fecha_de_baja, double valor_venta, string clase_documento_tercero, double identificacion_tercero)
+end prototypes
+
+global function st_error fx_activos_contabiliza_baja (datetime fecha_de_compra, double valor_de_compra, string codigo_tipo_inventario, string codigo_clase_de_activo, string codigo_marca, string codigo_modelo, integer placa_inventario, date fecha_de_baja, double valor_venta, string clase_documento_tercero, double identificacion_tercero);st_error lst_error
+
+Double valor_acumulado_1_ano
+Any proceso_1
+String mensj, consecutivo_salida_print
+Integer resp
+
+DECLARE proceso_1 PROCEDURE FOR activos_contabiliza_baja
+	@fecha_de_compra					= :fecha_de_compra,
+	@valor_de_compra					= :valor_de_compra,
+	@codigo_tipo_inventario			= :codigo_tipo_inventario,	
+	@codigo_clase_de_activo			= :codigo_clase_de_activo, 
+	@codigo_marca						= :codigo_marca, 
+	@codigo_modelo						= :codigo_modelo, 
+	@placa_inventario					= :placa_inventario, 
+	@fecha_de_baja						= :fecha_de_baja, 
+	@valor_venta						= :valor_venta,
+	@clase_documento_venta			= :clase_documento_tercero,
+	@identificacion_venta			= :identificacion_tercero,	
+	@consecutivo_salida_print		= :consecutivo_salida_print output,
+	@respuesta							= :mensj output,
+	@resp_num							= :resp output;
+	
+EXECUTE proceso_1;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en la Ejecución -> "+Trim(mensj)
+END IF
+
+FETCH proceso_1 INTO :consecutivo_salida_print, :mensj, :resp;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el FETCH -> "+Trim(mensj)
+END IF
+	
+CLOSE proceso_1;
+
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el CLOSE -> "+Trim(mensj)
+END IF
+	
+IF resp = 1 THEN
+	mensj = "! Imposible Ejecutar Procedimiento Almacenado activos_contabiliza_baja ¡~r~n"+Trim(mensj)
+END IF
+IF resp = 2 THEN
+	mensj = "! El Procedimiento activos_contabiliza_baja se Ejecutó Correctamente "+consecutivo_salida_print+" ¡"
+END IF
+
+
+lst_error.codigo_error	= resp
+lst_error.mensaje_error = mensj
+lst_error.valor_1a		= consecutivo_salida_print
+
+RETURN lst_error
+end function
+

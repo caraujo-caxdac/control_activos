@@ -1,0 +1,5 @@
+﻿$PBExportHeader$st_usuarios.srs
+global type st_usuarios from structure
+	string		nombre_usuario
+end type
+

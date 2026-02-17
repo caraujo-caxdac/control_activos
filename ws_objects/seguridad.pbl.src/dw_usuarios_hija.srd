@@ -1,0 +1,15 @@
+﻿$PBExportHeader$dw_usuarios_hija.srd
+$PBExportComments$Datawindows para ser Utilizado en un DropDownDW en el DW dw_usuarios
+release 6;
+datawindow(units=0 timer_interval=0 color=16777215 processing=1 print.documentname="" print.orientation = 0 print.margin.left = 110 print.margin.right = 110 print.margin.top = 96 print.margin.bottom = 96 print.paper.source = 0 print.paper.size = 0 print.prompt=no print.buttons=no print.preview.buttons=no grid.lines=0 )
+summary(height=0 color="536870912" )
+footer(height=0 color="536870912" )
+detail(height=72 color="536870912" )
+table(column=(type=char(40) update=yes updatewhereclause=yes name=descripcion_grupo_afiliados dbname="grupos_afiliados.descripcion_grupo_afiliados" )
+ column=(type=long update=yes updatewhereclause=yes key=yes name=codigo_grupo_afiliados dbname="grupos_afiliados.codigo_grupo_afiliados" )
+ retrieve="PBSELECT( VERSION(400) TABLE(NAME=~"grupos_afiliados~" ) COLUMN(NAME=~"grupos_afiliados.descripcion_grupo_afiliados~") COLUMN(NAME=~"grupos_afiliados.codigo_grupo_afiliados~")) ORDER(NAME=~"grupos_afiliados.descripcion_grupo_afiliados~" ASC=yes ) " update="grupos_afiliados" updatewhere=1 updatekeyinplace=no )
+text(band=header alignment="2" text="Descripcion Grupo Afiliados"border="0" color="0" x="9" y="8" height="64" width="1577"  name=descripcion_grupo_afiliados_t  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+text(band=header alignment="2" text="Codigo Grupo Afiliados"border="0" color="0" x="1595" y="8" height="64" width="603"  name=codigo_grupo_afiliados_t  font.face="Arial" font.height="-10" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="1" background.color="536870912" )
+column(band=detail id=1 alignment="0" tabsequence=10 border="0" color="8388608" x="9" y="4" height="64" width="1577" format="[general]"  name=descripcion_grupo_afiliados edit.limit=40 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="15780518" )
+column(band=detail id=2 alignment="1" tabsequence=20 border="0" color="8388608" x="1595" y="4" height="64" width="603" format="[general]"  name=codigo_grupo_afiliados edit.limit=0 edit.case=any edit.focusrectangle=no edit.autoselect=yes edit.autohscroll=yes  font.face="Arial" font.height="-8" font.weight="400"  font.family="2" font.pitch="2" font.charset="0" background.mode="2" background.color="15780518" )
+htmltable(border="1" cellpadding="0" cellspacing="0" generatecss="no" nowrap="yes")

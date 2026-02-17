@@ -1,0 +1,10 @@
+﻿$PBExportHeader$st_error.srs
+global type st_error from structure
+	integer		codigo_error
+	string		mensaje_error
+	double		valor_1n
+	datetime		valor_1dt
+	string		valor_1a
+	date		valor_1d
+end type
+

@@ -1,0 +1,14 @@
+﻿$PBExportHeader$st_impresion.srs
+global type st_impresion from structure
+	string		dato
+	integer		ini
+	integer		fin
+	long		copia
+	string		otros
+	integer		uno_de
+	integer		total
+	string		dato_cancelar
+	integer		pagina_actual
+	string		caja_de_texto
+end type
+

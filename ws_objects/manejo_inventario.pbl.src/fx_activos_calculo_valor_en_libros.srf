@@ -1,0 +1,53 @@
+﻿$PBExportHeader$fx_activos_calculo_valor_en_libros.srf
+global type fx_activos_calculo_valor_en_libros from function_object
+end type
+
+forward prototypes
+global function st_error fx_activos_calculo_valor_en_libros (integer ano_periodo, integer mes_periodo)
+end prototypes
+
+global function st_error fx_activos_calculo_valor_en_libros (integer ano_periodo, integer mes_periodo);st_error lst_error
+
+Double valor_acumulado_1_ano
+Any proceso_1
+String mensj
+Integer resp
+
+DECLARE proceso_1 PROCEDURE FOR activos_calculo_valor_en_libros
+	@ano_periodo		= :ano_periodo,
+	@mes_periodo		= :mes_periodo,
+	@respuesta			= :mensj output,
+	@resp_num			= :resp output;
+	
+EXECUTE proceso_1;
+	
+IF SQLCA.SQLCode <> 0 THEN
+	mensj = "Error en la Ejecución -> "+Trim(mensj)+" Mensaje de la BD : "+Trim(SQLCA.sqlerrtext)
+END IF
+
+FETCH proceso_1 INTO :mensj, :resp;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el FETCH -> "+Trim(mensj)
+END IF
+	
+CLOSE proceso_1;
+
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en el CLOSE -> "+Trim(mensj)
+END IF
+	
+IF resp = 1 THEN
+	mensj = "! Imposible Ejecutar Procedimiento Almacenado activos_calculo_valor_en_libros ¡~r~n"+Trim(mensj)
+END IF
+IF resp = 2 THEN
+	mensj = "! El Procedimiento activos_calculo_valor_en_libros se Ejecutó Correctamente ¡"
+END IF
+
+
+lst_error.codigo_error	= resp
+lst_error.mensaje_error = mensj
+
+RETURN lst_error
+end function
+

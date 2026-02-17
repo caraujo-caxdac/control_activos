@@ -1,0 +1,140 @@
+﻿$PBExportHeader$p_control_activos.srj
+EXE:control_activos.exe,,0,0,1,0,C:\Program Files (x86)\Appeon\Common\PowerBuilder\Runtime 22.2.0.3441
+CMP:0,0,0,2,0,0,1
+COM:CAXDAC - Dpto. de Sistemas
+DES:Aplicación para el Control de los Activos Fijos y los Cargos Diferidos
+CPY:2024-11-21-001
+PRD:Aplicación Control de Activos Fijos y Cargos Diferidos
+PVS:1.0.0.1
+PVN:1,0,0,1
+FVS:1.0.0.1
+FVN:1,0,0,1
+MAN:0,asInvoker,0
+PBD:control_activos.pbl,,1
+PBD:tablas_basicas.pbl,,1
+PBD:manejo_inventario.pbl,,1
+PBD:seguridad.pbl,,1
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_imprime_causacion_acumulada_ano_01,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_modelo_activo,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_trasladar_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,control_activos,a
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_activo_fisico_x_resp_x_entrega,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_impresion_activo_fisico_x_resp_x_entrega,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_informe_depreciacion_acumulada_vlr_libros,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,dw_para_impresion,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_impresion_botones,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_impresion_activo_fisico_x_tipo_inventario,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_child_personas_responsables,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_menu_boton,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_cargos_empresa,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_inventario_01,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_trasladar_de_per_a_per_2,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_usuarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,m_principal,m
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_historico_traslados_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_clase_de_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_cargos_empresa,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_log_control_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_tipo_inventario_01,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_causacion_mensual_activo,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_child_empresas_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_responsables_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_usuarios_child,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,w_entrada,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_child_tipos_inventarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_imprime_valor_en_libros_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_impresion_activo_fisico_x_responsable,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_child_fabricante,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_responsables_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_responsables_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_marca_fabricante,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_informe_depreciacion_acumulada_ano,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_modelos_01,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_historico_traslados_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_calculo_depreciacion,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_trasladar_de_person_a_person,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_calculo_depreciacion_inicial,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_impresion_permisos_usuarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_informacion_adicional_para_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_impresion_causacion_mensual,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_impresion_usuarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_informacion_adicional_de_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_calculo_depreciacion_anual,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_menus_botones,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,st_usuarios,s
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_marcas_fabricantes,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_tipos_de_inventarios,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_botones,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,st_impresion,s
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_impresion_menus,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_menus_child,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_contabiliza_baja,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_imprime_menus_botones,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,w_segunda,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,w_confirma_imp,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_contabiliza_depreciacion,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_usuarios,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_informacion_adicional_para_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_cuentas_contables,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_imprime_usuarios,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_usuario_antiguo,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_tipos_de_inventarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_ubicaciones_oficina,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_calculo_valor_en_libros,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_cargos_empresa,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_child_clase_documento_terceros,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_inventario_persona,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_consulta_log_aplicacion,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_log_aplicacion,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_valor_en_libros_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_cargos_empresas,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_captura_inventario_activos_fijos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_marca_fabricante,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_modelo_activo,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_fabricantes_01,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_permisos_usuarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,n_versioninfo,u
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_tipos_de_inventarios,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_modelo_activo,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_ubicaciones_oficina,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_causacion_acumulada_ano_01,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_ubicaciones,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_botones_aplicacion,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,w_estado_impresion,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_child_clase_activo,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_child_modelo_activo,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dddw_hija_ubicaciones_oficina,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_menus,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,st_control_activos,s
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_escoge_reporte_inventario_fisico,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_consulta_historico_traslados_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_impresion_log_control_de_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_child_placa_activo,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_clases_de_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_consulta_inventario,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_impresion_consulta_historico_traslados_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_menus,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_imprime_menus,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_clase_de_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_contabiliza_compra,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_generacion_depreciacion_acumulada,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_consulta_depreciacion_mensual,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_activo_fisico_x_responsable,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,dw_impresion_menus_botones,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,st_error,s
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_imprime_permisos_usuarios,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_cuentas_contables,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_baja_inventario_activos_fijos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_imprime_botones,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_tipos_de_inventarios,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_clase_de_activos,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_modelo_activo,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_child_consulta_responsables_01,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_responsables_activos,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,dw_impresion_ubicaciones,d
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,fx_activos_trasladar_de_per_a_per_2_ubica,f
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\seguridad.pbl,w_usuarios_operaciones,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\control_activos.pbl,w_acerca_de_aplicacion,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\tablas_basicas.pbl,w_imprime_marcas_fabricantes,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,w_imprime_activo_fisico_x_tipo_inventario,w
+OBJ:\\win-10-pro\c$\Aplicaciones_PB_2022\Aplicacion Control Activos\manejo_inventario.pbl,dw_clase_activos_01,d

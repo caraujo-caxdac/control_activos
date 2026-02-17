@@ -1,0 +1,30 @@
+﻿$PBExportHeader$fx_activos_trasladar_de_per_a_per_2_ubica.srf
+global type fx_activos_trasladar_de_per_a_per_2_ubica from function_object
+end type
+
+forward prototypes
+global function st_error fx_activos_trasladar_de_per_a_per_2_ubica (string clase_documento_saca, double identificacion_saca, string clase_documento_entra, double identificacion_entra, date fecha_cambio, string codigo_tipo_inventario, string codigo_clase_de_activo, string codigo_marca, string codigo_modelo, integer placa_inventario, string codigo_ubicacion)
+end prototypes
+
+global function st_error fx_activos_trasladar_de_per_a_per_2_ubica (string clase_documento_saca, double identificacion_saca, string clase_documento_entra, double identificacion_entra, date fecha_cambio, string codigo_tipo_inventario, string codigo_clase_de_activo, string codigo_marca, string codigo_modelo, integer placa_inventario, string codigo_ubicacion);st_error lst_error
+String	mensj
+Integer	resp
+
+UPDATE	activos_inventario_fisico 
+	SET	codigo_ubicacion = :codigo_ubicacion
+	WHERE clase_documento_responsable=:clase_documento_saca AND identificacion_responsable=:identificacion_saca AND
+	codigo_tipo_inventario=:codigo_tipo_inventario AND codigo_clase_de_activo=:codigo_clase_de_activo AND codigo_marca=:codigo_marca AND 
+	codigo_modelo=:codigo_modelo AND placa_inventario=:placa_inventario;
+	
+IF SQLCA.SQLCode  <> 0 THEN
+	mensj = "Error en la Ejecución -> "+Trim(mensj)
+ELSE
+	COMMIT;
+END IF
+
+lst_error.codigo_error	= resp
+lst_error.mensaje_error = mensj
+
+RETURN lst_error
+end function
+

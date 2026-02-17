@@ -1,0 +1,9 @@
+﻿$PBExportHeader$st_control_activos.srs
+global type st_control_activos from structure
+	integer		ano_cierre
+	integer		mes_cierre
+	string		nombre_mes
+	integer		mes_cierre_2
+	string		nombre_mes_2
+end type
+

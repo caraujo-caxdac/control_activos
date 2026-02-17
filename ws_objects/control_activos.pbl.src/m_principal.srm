@@ -1,0 +1,1473 @@
+﻿$PBExportHeader$m_principal.srm
+$PBExportComments$Menu Principal de la Aplicación
+forward
+global type m_principal from menu
+end type
+type m_tablasbásicas from menu within m_principal
+end type
+type m_marcafabricante from menu within m_tablasbásicas
+end type
+type m_tiposdeinventarios from menu within m_tablasbásicas
+end type
+type m_tiposdeactivos from menu within m_tablasbásicas
+end type
+type m_informaciónadicionaldeactivos from menu within m_tablasbásicas
+end type
+type m_modelosdeactivos from menu within m_tablasbásicas
+end type
+type m_cuentascontables from menu within m_tablasbásicas
+end type
+type m_responsable from menu within m_tablasbásicas
+end type
+type m_cargosdefinidosenlaempresa from menu within m_responsable
+end type
+type m_responsables from menu within m_responsable
+end type
+type m_responsable from menu within m_tablasbásicas
+m_cargosdefinidosenlaempresa m_cargosdefinidosenlaempresa
+m_responsables m_responsables
+end type
+type m_ubicacionesdeoficina from menu within m_tablasbásicas
+end type
+type m_- from menu within m_tablasbásicas
+end type
+type m_salir from menu within m_tablasbásicas
+end type
+type m_tablasbásicas from menu within m_principal
+m_marcafabricante m_marcafabricante
+m_tiposdeinventarios m_tiposdeinventarios
+m_tiposdeactivos m_tiposdeactivos
+m_informaciónadicionaldeactivos m_informaciónadicionaldeactivos
+m_modelosdeactivos m_modelosdeactivos
+m_cuentascontables m_cuentascontables
+m_responsable m_responsable
+m_ubicacionesdeoficina m_ubicacionesdeoficina
+m_- m_-
+m_salir m_salir
+end type
+type m_manejodeactivos from menu within m_principal
+end type
+type m_capturadelinventario from menu within m_manejodeactivos
+end type
+type m_bajadeinventario from menu within m_manejodeactivos
+end type
+type m_consultainventario from menu within m_manejodeactivos
+end type
+type m_generardepreciaciónacumulada from menu within m_manejodeactivos
+end type
+type m_reportes from menu within m_manejodeactivos
+end type
+type m_depreciaciónacumulada from menu within m_reportes
+end type
+type m_valorenlibrodelosactivos from menu within m_reportes
+end type
+type m_reportes from menu within m_manejodeactivos
+m_depreciaciónacumulada m_depreciaciónacumulada
+m_valorenlibrodelosactivos m_valorenlibrodelosactivos
+end type
+type m_trasladarlosactivosdeunapersonaaotra from menu within m_manejodeactivos
+end type
+type m_consultahistóricodetraslados from menu within m_manejodeactivos
+end type
+type m_consultadellogdelaaplicación from menu within m_manejodeactivos
+end type
+type m_manejodeactivos from menu within m_principal
+m_capturadelinventario m_capturadelinventario
+m_bajadeinventario m_bajadeinventario
+m_consultainventario m_consultainventario
+m_generardepreciaciónacumulada m_generardepreciaciónacumulada
+m_reportes m_reportes
+m_trasladarlosactivosdeunapersonaaotra m_trasladarlosactivosdeunapersonaaotra
+m_consultahistóricodetraslados m_consultahistóricodetraslados
+m_consultadellogdelaaplicación m_consultadellogdelaaplicación
+end type
+type m_seguridad from menu within m_principal
+end type
+type m_usuarios from menu within m_seguridad
+end type
+type m_operaciones from menu within m_seguridad
+end type
+type m_menús from menu within m_operaciones
+end type
+type m_botones from menu within m_operaciones
+end type
+type m_relaciónmenús-botones from menu within m_operaciones
+end type
+type m_operaciones from menu within m_seguridad
+m_menús m_menús
+m_botones m_botones
+m_relaciónmenús-botones m_relaciónmenús-botones
+end type
+type m_permisosdeusuarios from menu within m_seguridad
+end type
+type m_seguridad from menu within m_principal
+m_usuarios m_usuarios
+m_operaciones m_operaciones
+m_permisosdeusuarios m_permisosdeusuarios
+end type
+type m_0 from menu within m_principal
+end type
+type m_acercadelaaplicación from menu within m_0
+end type
+type m_ayuda from menu within m_0
+end type
+type m_0 from menu within m_principal
+m_acercadelaaplicación m_acercadelaaplicación
+m_ayuda m_ayuda
+end type
+global type m_principal from menu
+m_tablasbásicas m_tablasbásicas
+m_manejodeactivos m_manejodeactivos
+m_seguridad m_seguridad
+m_0 m_0
+end type
+end forward
+
+global type m_principal from menu
+m_tablasbásicas m_tablasbásicas
+m_manejodeactivos m_manejodeactivos
+m_seguridad m_seguridad
+m_0 m_0
+end type
+global m_principal m_principal
+
+on m_principal.create
+m_principal=this
+call super::create
+this.text = "m_principal"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_tablasbásicas=create m_tablasbásicas
+this.m_manejodeactivos=create m_manejodeactivos
+this.m_seguridad=create m_seguridad
+this.m_0=create m_0
+this.Item[UpperBound(this.Item)+1]=this.m_tablasbásicas
+this.Item[UpperBound(this.Item)+1]=this.m_manejodeactivos
+this.Item[UpperBound(this.Item)+1]=this.m_seguridad
+this.Item[UpperBound(this.Item)+1]=this.m_0
+end on
+
+on m_principal.destroy
+call super::destroy
+destroy(this.m_tablasbásicas)
+destroy(this.m_manejodeactivos)
+destroy(this.m_seguridad)
+destroy(this.m_0)
+end on
+
+type m_tablasbásicas from menu within m_principal
+m_marcafabricante m_marcafabricante
+m_tiposdeinventarios m_tiposdeinventarios
+m_tiposdeactivos m_tiposdeactivos
+m_informaciónadicionaldeactivos m_informaciónadicionaldeactivos
+m_modelosdeactivos m_modelosdeactivos
+m_cuentascontables m_cuentascontables
+m_responsable m_responsable
+m_ubicacionesdeoficina m_ubicacionesdeoficina
+m_- m_-
+m_salir m_salir
+end type
+
+on m_tablasbásicas.create
+call super::create
+this.text = "&Tablas Básicas"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.menutitletext = "Tablas Básicas"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_marcafabricante=create m_marcafabricante
+this.m_tiposdeinventarios=create m_tiposdeinventarios
+this.m_tiposdeactivos=create m_tiposdeactivos
+this.m_informaciónadicionaldeactivos=create m_informaciónadicionaldeactivos
+this.m_modelosdeactivos=create m_modelosdeactivos
+this.m_cuentascontables=create m_cuentascontables
+this.m_responsable=create m_responsable
+this.m_ubicacionesdeoficina=create m_ubicacionesdeoficina
+this.m_-=create m_-
+this.m_salir=create m_salir
+this.Item[UpperBound(this.Item)+1]=this.m_marcafabricante
+this.Item[UpperBound(this.Item)+1]=this.m_tiposdeinventarios
+this.Item[UpperBound(this.Item)+1]=this.m_tiposdeactivos
+this.Item[UpperBound(this.Item)+1]=this.m_informaciónadicionaldeactivos
+this.Item[UpperBound(this.Item)+1]=this.m_modelosdeactivos
+this.Item[UpperBound(this.Item)+1]=this.m_cuentascontables
+this.Item[UpperBound(this.Item)+1]=this.m_responsable
+this.Item[UpperBound(this.Item)+1]=this.m_ubicacionesdeoficina
+this.Item[UpperBound(this.Item)+1]=this.m_-
+this.Item[UpperBound(this.Item)+1]=this.m_salir
+end on
+
+on m_tablasbásicas.destroy
+call super::destroy
+destroy(this.m_marcafabricante)
+destroy(this.m_tiposdeinventarios)
+destroy(this.m_tiposdeactivos)
+destroy(this.m_informaciónadicionaldeactivos)
+destroy(this.m_modelosdeactivos)
+destroy(this.m_cuentascontables)
+destroy(this.m_responsable)
+destroy(this.m_ubicacionesdeoficina)
+destroy(this.m_-)
+destroy(this.m_salir)
+end on
+
+type m_marcafabricante from menu within m_tablasbásicas
+end type
+
+event clicked;OPEN(w_marca_fabricante)
+end event
+
+on m_marcafabricante.create
+call super::create
+this.text = "&Marca - Fabricante"
+this.microhelp = "Ventana para Definir las Marcas o Fabricantes de los Inventarios..."
+this.toolbaritemname = "deploy!"
+this.menuimage = "Deploy!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_marcafabricante.destroy
+call super::destroy
+end on
+
+type m_tiposdeinventarios from menu within m_tablasbásicas
+end type
+
+on m_tiposdeinventarios.create
+call super::create
+this.text = "&Tipos de Inventarios"
+this.microhelp = "Ventana para Definir los Tipos de Inventarios"
+this.toolbaritemname = "compile!"
+this.toolbaritemtext = "Tipos de Inventarios"
+this.menuimage = "Compile!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_tiposdeinventarios.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_tipos_de_inventarios)
+end event
+
+type m_tiposdeactivos from menu within m_tablasbásicas
+end type
+
+on m_tiposdeactivos.create
+call super::create
+this.text = "Tipos de &Activos"
+this.microhelp = "Ventana para Definir los Diferentes Tipos de Activos en un Inventario..."
+this.toolbaritemname = "createruntime5!"
+this.toolbaritemtext = "Tipos de Activos"
+this.menuimage = "CreateRuntime5!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_tiposdeactivos.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_clase_de_activos)
+end event
+
+type m_informaciónadicionaldeactivos from menu within m_tablasbásicas
+end type
+
+on m_informaciónadicionaldeactivos.create
+call super::create
+this.text = "&Información Adicional de Activos"
+this.microhelp = "Ventana para Definir la Información Adicional para los Tipos de Activos"
+this.toolbaritemname = "copy!"
+this.toolbaritemtext = "Información Adicional de Activos"
+this.menuimage = "Copy!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_informaciónadicionaldeactivos.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_informacion_adicional_para_activos)
+end event
+
+type m_modelosdeactivos from menu within m_tablasbásicas
+end type
+
+on m_modelosdeactivos.create
+call super::create
+this.text = "&Modelos de Activos"
+this.microhelp = "Ventana para Definir los Modelos de Activos..."
+this.toolbaritemname = "createlibrary!"
+this.toolbaritemtext = "Modelos de Activos"
+this.menuimage = "CreateLibrary!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_modelosdeactivos.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_modelo_activo)
+end event
+
+type m_cuentascontables from menu within m_tablasbásicas
+end type
+
+event clicked;OPEN(w_cuentas_contables)
+end event
+
+on m_cuentascontables.create
+call super::create
+this.text = "&Cuentas Contables"
+this.microhelp = "Ventana para Definir las Cuentas Contables..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_cuentascontables.destroy
+call super::destroy
+end on
+
+type m_responsable from menu within m_tablasbásicas
+m_cargosdefinidosenlaempresa m_cargosdefinidosenlaempresa
+m_responsables m_responsables
+end type
+
+on m_responsable.create
+call super::create
+this.text = "Responsable"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_cargosdefinidosenlaempresa=create m_cargosdefinidosenlaempresa
+this.m_responsables=create m_responsables
+this.Item[UpperBound(this.Item)+1]=this.m_cargosdefinidosenlaempresa
+this.Item[UpperBound(this.Item)+1]=this.m_responsables
+end on
+
+on m_responsable.destroy
+call super::destroy
+destroy(this.m_cargosdefinidosenlaempresa)
+destroy(this.m_responsables)
+end on
+
+type m_cargosdefinidosenlaempresa from menu within m_responsable
+end type
+
+on m_cargosdefinidosenlaempresa.create
+call super::create
+this.text = "&Cargos Definidos en la Empresa"
+this.microhelp = "Ventana para Definir los Cargos de la Compañía..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_cargosdefinidosenlaempresa.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_cargos_empresa)
+end event
+
+type m_responsables from menu within m_responsable
+end type
+
+on m_responsables.create
+call super::create
+this.text = "&Responsables"
+this.microhelp = "Ventana para Definir los Responsables de la Compañía..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_responsables.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_responsables_activos)
+end event
+
+type m_ubicacionesdeoficina from menu within m_tablasbásicas
+end type
+
+event clicked;OPEN(w_ubicaciones_oficina)
+end event
+
+on m_ubicacionesdeoficina.create
+call super::create
+this.text = "Ubicaciones de Oficina"
+this.microhelp = "Definición y administración de las ubicaciones físicas de la oficina, asignando un código representativo."
+this.toolbaritemname = "Custom042a!"
+this.menuimage = "Custom042a!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_ubicacionesdeoficina.destroy
+call super::destroy
+end on
+
+type m_- from menu within m_tablasbásicas
+end type
+
+on m_-.create
+call super::create
+this.text = "-"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_-.destroy
+call super::destroy
+end on
+
+type m_salir from menu within m_tablasbásicas
+end type
+
+on m_salir.create
+call super::create
+this.text = "&Salir~tCtrl+S"
+this.shortcut = 339
+this.toolbaritemname = "exit!"
+this.toolbaritemtext = "Cerrar la Aplicación"
+this.toolbaritembarindex = 2
+this.toolbaritemorder = 1
+this.menuimage = "exit!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_salir.destroy
+call super::destroy
+end on
+
+event clicked;w_segunda.Tag = "Cerrando el Sistema... "+ string(today(),"dd/mm/yyyy  hh:mm:ss")
+w_segunda.SetMicrohelp(w_segunda.Tag)
+close(w_segunda)
+close(w_entrada)
+end event
+
+type m_manejodeactivos from menu within m_principal
+m_capturadelinventario m_capturadelinventario
+m_bajadeinventario m_bajadeinventario
+m_consultainventario m_consultainventario
+m_generardepreciaciónacumulada m_generardepreciaciónacumulada
+m_reportes m_reportes
+m_trasladarlosactivosdeunapersonaaotra m_trasladarlosactivosdeunapersonaaotra
+m_consultahistóricodetraslados m_consultahistóricodetraslados
+m_consultadellogdelaaplicación m_consultadellogdelaaplicación
+end type
+
+on m_manejodeactivos.create
+call super::create
+this.text = "&Manejo de Activos"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_capturadelinventario=create m_capturadelinventario
+this.m_bajadeinventario=create m_bajadeinventario
+this.m_consultainventario=create m_consultainventario
+this.m_generardepreciaciónacumulada=create m_generardepreciaciónacumulada
+this.m_reportes=create m_reportes
+this.m_trasladarlosactivosdeunapersonaaotra=create m_trasladarlosactivosdeunapersonaaotra
+this.m_consultahistóricodetraslados=create m_consultahistóricodetraslados
+this.m_consultadellogdelaaplicación=create m_consultadellogdelaaplicación
+this.Item[UpperBound(this.Item)+1]=this.m_capturadelinventario
+this.Item[UpperBound(this.Item)+1]=this.m_bajadeinventario
+this.Item[UpperBound(this.Item)+1]=this.m_consultainventario
+this.Item[UpperBound(this.Item)+1]=this.m_generardepreciaciónacumulada
+this.Item[UpperBound(this.Item)+1]=this.m_reportes
+this.Item[UpperBound(this.Item)+1]=this.m_trasladarlosactivosdeunapersonaaotra
+this.Item[UpperBound(this.Item)+1]=this.m_consultahistóricodetraslados
+this.Item[UpperBound(this.Item)+1]=this.m_consultadellogdelaaplicación
+end on
+
+on m_manejodeactivos.destroy
+call super::destroy
+destroy(this.m_capturadelinventario)
+destroy(this.m_bajadeinventario)
+destroy(this.m_consultainventario)
+destroy(this.m_generardepreciaciónacumulada)
+destroy(this.m_reportes)
+destroy(this.m_trasladarlosactivosdeunapersonaaotra)
+destroy(this.m_consultahistóricodetraslados)
+destroy(this.m_consultadellogdelaaplicación)
+end on
+
+type m_capturadelinventario from menu within m_manejodeactivos
+end type
+
+on m_capturadelinventario.create
+call super::create
+this.text = "&Captura del Inventario"
+this.microhelp = "Ventana para Ingresar el Inventario de la Compañía..."
+this.toolbaritemname = "continue!"
+this.toolbaritemtext = "Captura de Inventario"
+this.menuimage = "Continue!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_capturadelinventario.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_captura_inventario_activos_fijos)
+end event
+
+type m_bajadeinventario from menu within m_manejodeactivos
+end type
+
+on m_bajadeinventario.create
+call super::create
+this.text = "&Baja de Inventario"
+this.microhelp = "Ventana para dar de Baja un Activo Fijo..."
+this.toolbaritemname = "checkout!"
+this.toolbaritemtext = "Baja de Activos"
+this.menuimage = "CheckOut!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_bajadeinventario.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_baja_inventario_activos_fijos)
+end event
+
+type m_consultainventario from menu within m_manejodeactivos
+end type
+
+on m_consultainventario.create
+call super::create
+this.text = "Consulta &Inventario"
+this.microhelp = "Ventana para Consultar el Inventario"
+this.toolbaritemname = "custom050!"
+this.toolbaritemtext = "Consulta del Inventario"
+this.menuimage = "Custom050!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_consultainventario.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_consulta_inventario)
+end event
+
+type m_generardepreciaciónacumulada from menu within m_manejodeactivos
+end type
+
+on m_generardepreciaciónacumulada.create
+call super::create
+this.text = "&Generar Depreciación Acumulada"
+this.microhelp = "Ventana para Generar la Depreciación Acumulada..."
+this.toolbaritemname = "custom048!"
+this.toolbaritemtext = "Depreciación Acumulada"
+this.menuimage = "Custom048!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_generardepreciaciónacumulada.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_generacion_depreciacion_acumulada)
+end event
+
+type m_reportes from menu within m_manejodeactivos
+m_depreciaciónacumulada m_depreciaciónacumulada
+m_valorenlibrodelosactivos m_valorenlibrodelosactivos
+end type
+
+on m_reportes.create
+call super::create
+this.text = "&Reportes"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_depreciaciónacumulada=create m_depreciaciónacumulada
+this.m_valorenlibrodelosactivos=create m_valorenlibrodelosactivos
+this.Item[UpperBound(this.Item)+1]=this.m_depreciaciónacumulada
+this.Item[UpperBound(this.Item)+1]=this.m_valorenlibrodelosactivos
+end on
+
+on m_reportes.destroy
+call super::destroy
+destroy(this.m_depreciaciónacumulada)
+destroy(this.m_valorenlibrodelosactivos)
+end on
+
+type m_depreciaciónacumulada from menu within m_reportes
+end type
+
+on m_depreciaciónacumulada.create
+call super::create
+this.text = "&Depreciación Acumulada"
+this.microhelp = "Ventana para Generar el Informe de la Depreciación Acumulada..."
+this.toolbaritemname = "count!"
+this.toolbaritemtext = "Reporte Depreciación Acumulada"
+this.menuimage = "Count!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_depreciaciónacumulada.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_informe_depreciacion_acumulada_ano)
+end event
+
+type m_valorenlibrodelosactivos from menu within m_reportes
+end type
+
+on m_valorenlibrodelosactivos.create
+call super::create
+this.text = "Valor en Libro de los Activos"
+this.microhelp = "Ventana para ver el Valor en Libros de los Activos de la Compañía..."
+this.toolbaritemname = "crosstab!"
+this.toolbaritemtext = "Valor en Libros de los Activos"
+this.menuimage = "CrossTab!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_valorenlibrodelosactivos.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_informe_depreciacion_acumulada_vlr_libros)
+end event
+
+type m_trasladarlosactivosdeunapersonaaotra from menu within m_manejodeactivos
+end type
+
+on m_trasladarlosactivosdeunapersonaaotra.create
+call super::create
+this.text = "&Trasladar los Activos de una Persona a Otra"
+this.microhelp = "Ventana para Trasladar los Activos de una Persona a Otra..."
+this.toolbaritemname = "copy!"
+this.toolbaritemtext = "Trasladar Activos a Otra Persona"
+this.menuimage = "Copy!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_trasladarlosactivosdeunapersonaaotra.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_trasladar_activos)
+end event
+
+type m_consultahistóricodetraslados from menu within m_manejodeactivos
+end type
+
+event clicked;OPEN(w_consulta_historico_traslados_activos)
+end event
+
+on m_consultahistóricodetraslados.create
+call super::create
+this.text = "Consulta Histórico de Traslados"
+this.microhelp = "Ventana para Consultar los Históricos de Traslados de Activos..."
+this.toolbaritemname = "custom039!"
+this.toolbaritemtext = "Consulta Histórico Traslado de Activos"
+this.menuimage = "Custom039!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_consultahistóricodetraslados.destroy
+call super::destroy
+end on
+
+type m_consultadellogdelaaplicación from menu within m_manejodeactivos
+end type
+
+on m_consultadellogdelaaplicación.create
+call super::create
+this.text = "Consulta del Log de la Aplicación"
+this.microhelp = "Ventana para la Consulta del Log de la Aplicación..."
+this.toolbaritemname = "insert5!"
+this.toolbaritemtext = "Consulta del Log de la Aplicación"
+this.menuimage = "Insert5!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_consultadellogdelaaplicación.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_consulta_log_aplicacion)
+end event
+
+type m_seguridad from menu within m_principal
+m_usuarios m_usuarios
+m_operaciones m_operaciones
+m_permisosdeusuarios m_permisosdeusuarios
+end type
+
+on m_seguridad.create
+call super::create
+this.text = "&Seguridad"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_usuarios=create m_usuarios
+this.m_operaciones=create m_operaciones
+this.m_permisosdeusuarios=create m_permisosdeusuarios
+this.Item[UpperBound(this.Item)+1]=this.m_usuarios
+this.Item[UpperBound(this.Item)+1]=this.m_operaciones
+this.Item[UpperBound(this.Item)+1]=this.m_permisosdeusuarios
+end on
+
+on m_seguridad.destroy
+call super::destroy
+destroy(this.m_usuarios)
+destroy(this.m_operaciones)
+destroy(this.m_permisosdeusuarios)
+end on
+
+type m_usuarios from menu within m_seguridad
+end type
+
+on m_usuarios.create
+call super::create
+this.text = "&Usuarios~tCtrl+Shift+U"
+this.shortcut = 1365
+this.microhelp = "Ventana para la Definiciíon de los Usuarios de la Aplicación"
+this.toolbaritemname = "userobject1!"
+this.toolbaritemtext = "Usuarios de la Aplicación"
+this.toolbaritembarindex = 2
+this.menuimage = "UserObject1!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_usuarios.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_usuarios)
+end event
+
+type m_operaciones from menu within m_seguridad
+m_menús m_menús
+m_botones m_botones
+m_relaciónmenús-botones m_relaciónmenús-botones
+end type
+
+on m_operaciones.create
+call super::create
+this.text = "&Operaciones"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_menús=create m_menús
+this.m_botones=create m_botones
+this.m_relaciónmenús-botones=create m_relaciónmenús-botones
+this.Item[UpperBound(this.Item)+1]=this.m_menús
+this.Item[UpperBound(this.Item)+1]=this.m_botones
+this.Item[UpperBound(this.Item)+1]=this.m_relaciónmenús-botones
+end on
+
+on m_operaciones.destroy
+call super::destroy
+destroy(this.m_menús)
+destroy(this.m_botones)
+destroy(this.m_relaciónmenús-botones)
+end on
+
+type m_menús from menu within m_operaciones
+end type
+
+on m_menús.create
+call super::create
+this.text = "&Menús~tCtrl+Shift+M"
+this.shortcut = 1357
+this.microhelp = "Ventana para Definir las Ventanas de la Aplicación..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_menús.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_menus)
+end event
+
+type m_botones from menu within m_operaciones
+end type
+
+on m_botones.create
+call super::create
+this.text = "&Botones~tCtrl+Shift+B"
+this.shortcut = 1346
+this.microhelp = "Ventana para Definir los Objetos de las Ventanas..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_botones.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_botones)
+end event
+
+type m_relaciónmenús-botones from menu within m_operaciones
+end type
+
+on m_relaciónmenús-botones.create
+call super::create
+this.text = "&Relación Menús - Botones"
+this.microhelp = "Ventana para la Definición de los Botones con las Ventanas..."
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_relaciónmenús-botones.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_menus_botones)
+end event
+
+type m_permisosdeusuarios from menu within m_seguridad
+end type
+
+on m_permisosdeusuarios.create
+call super::create
+this.text = "&Permisos de Usuarios~tCtrl+Shift+P"
+this.shortcut = 1360
+this.toolbaritemname = "databaseprofile5!"
+this.toolbaritemtext = "Definición de Permisos de Usuarios"
+this.toolbaritembarindex = 2
+this.menuimage = "databaseprofile5!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_permisosdeusuarios.destroy
+call super::destroy
+end on
+
+event clicked;OPEN(w_usuarios_operaciones)
+end event
+
+type m_0 from menu within m_principal
+m_acercadelaaplicación m_acercadelaaplicación
+m_ayuda m_ayuda
+end type
+
+on m_0.create
+call super::create
+this.text = "&?"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+this.m_acercadelaaplicación=create m_acercadelaaplicación
+this.m_ayuda=create m_ayuda
+this.Item[UpperBound(this.Item)+1]=this.m_acercadelaaplicación
+this.Item[UpperBound(this.Item)+1]=this.m_ayuda
+end on
+
+on m_0.destroy
+call super::destroy
+destroy(this.m_acercadelaaplicación)
+destroy(this.m_ayuda)
+end on
+
+type m_acercadelaaplicación from menu within m_0
+end type
+
+event clicked;OPEN(w_acerca_de_aplicacion)
+end event
+
+on m_acercadelaaplicación.create
+call super::create
+this.text = "&Acerca de la Aplicación"
+this.microhelp = "Ventana para ver Información de la Aplicación..."
+this.toolbaritemname = "custom071!"
+this.toolbaritemtext = "Acerca de la Aplicación"
+this.toolbaritembarindex = 2
+this.menuimage = "custom071!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_acercadelaaplicación.destroy
+call super::destroy
+end on
+
+type m_ayuda from menu within m_0
+end type
+
+on m_ayuda.create
+call super::create
+this.text = "&Ayuda~tF1"
+this.shortcut = 112
+this.toolbaritemname = "help!"
+this.toolbaritemtext = "Ayuda"
+this.toolbaritembarindex = 2
+this.menuimage = "help!"
+this.menustyle = contemporarymenu!
+this.menutextcolor = 134217735
+this.menubackcolor = 134217732
+this.menuhighlightcolor = 134217741
+this.textsize = 8
+this.weight = 400
+this.facename = "Tahoma"
+this.titlebackcolor = 134217730
+this.bitmapbackcolor = 12632256
+this.menutitles = true
+this.menubitmaps = true
+this.menuanimation = true
+this.titlegradient = true
+this.toolbartextcolor = 134217746
+this.toolbarbackcolor = 67108864
+this.toolbarhighlightcolor = 134217741
+this.toolbargradient = true
+this.bitmapgradient = true
+end on
+
+on m_ayuda.destroy
+call super::destroy
+end on
+
+event clicked;IF	RUN("rundll32.exe url.dll,FileProtocolHandler "+ gb_nombre_archivo_ayuda) = -1 THEN
+	MessageBox("Mensaje...","! No se Pudo Abrir el Archivo "+gb_nombre_archivo_ayuda +" ¡",StopSign!)
+END IF	
+end event
+
