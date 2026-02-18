@@ -63,6 +63,8 @@ ELSE
 	w_segunda.SetMicrohelp(This.Tag)
 	Timer(1,w_segunda)	
 END IF
+
+//Prueba
 end event
 
 event timer;IF gb_copyrigth = gb_version_aplicacion THEN
